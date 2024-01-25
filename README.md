@@ -3,18 +3,19 @@
   <ol>
     <li>Download the rom package along with boot,dtbo and vendor_boot(links mentioned in post)</li>
     <li>Put downloaded files in a folder(your platform tools folder preferred)</li>
-    <li>reboot to bootloader</li>
-    <li>In your pc open terminal where you copied the above files and run the following commands:</li>
+    <li>reboot to bootloader(hold power + volume down button)</li>
+    <li>In your pc,open terminal where you copied the above files and run the following commands:</li>
     <ul>
       <li>fastboot flash boot boot.img</li>
     <li>fastboot flash dtbo dtbo.img</li>
     <li>fastboot flash vendor_boot vendor_boot.img</li>
     <li>fastboot reboot recovery</li>
     </ul>
+    <li>Format data(optional if flashing on the same rom)</li>
+     <li>select reboot to recovery(advanced -> reboot to recovery)</li>
     <li>select apply update in recovery</li>
     <li>In your pc terminal, run adb sideload rom.zip(replace rom.zip with the downloaded rom package name.zip)</li>
-    <li>select reboot to recovery (appears when the installation reaches 47%)</li>
-    <li>Format data(optional if flashing on the same rom)</li>
+    <li>if you are flashing a vanilla build and want to flash gapps, select reboot to recovery(installation ends at 47% displayed on your pc terminal) and then sideload gapps by selecting apply update. Skip this step if you are already flashing a gapps build</li>
     <li>Reboot to system</li>
   </ol>
 </div>
